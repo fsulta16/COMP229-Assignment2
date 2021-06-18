@@ -1,0 +1,31 @@
+/* your custom CSS goes here */
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered1 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-5%, -50%);
+}
+.aboutme
+    {
+      position: absolute;
+      top: 60px;
+      left: 0px;
+    }
+.container {
+    position: auto;
+    text-align: center;
+    color: rgb(19, 18, 18);
+    }

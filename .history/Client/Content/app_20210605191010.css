@@ -1,0 +1,134 @@
+/*  App.css 
+    Farishta Sultani 
+    301079757 
+    June 4, 2021 */
+    
+/*Logo for navbar*/
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+/*Div class for the different page headings are centered*/
+.container {
+    position: auto;
+    text-align: center;
+    color: rgb(19, 18, 18);
+    }
+    .container-fluid1{
+        position: fixed;
+        left: 0;
+        bottom: 1;
+        width: 50%;
+        clear: both;
+        color: black;
+        text-align: left;
+        
+    }
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered1 {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-5%, -50%);
+}
+.centered2 {
+    position: auto;
+    top: 60%;
+    left: 0%;
+    padding: 15px;
+    transform: translate(0%, 5%);
+    font-size: 30px,
+    
+}
+.centered3 {
+    position: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    top: 60%;
+    left: 0%;
+    padding: 15px;
+    transform: translate(0%, 5%);
+    font-size: 30px,
+    
+}
+.aboutme
+{
+      position: absolute;
+      top: 60px;
+      left: 0px;
+    }
+
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+.html { 
+    /* The image used */
+  background-image:  src="/Assets\images/gradient.png";
+
+  background-size: cover;
+    /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  /*Id for service page images to float*/
+  #hp  {
+    float: right;    
+     margin: 0 0 0 15px;
+    }
+    #bottom-right {
+        position: absolute;
+        bottom: -80px;
+        right: 16px;
+        transform: translate(-50%, -50%);
+      }

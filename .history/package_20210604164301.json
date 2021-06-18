@@ -1,0 +1,14 @@
+{
+  "name": "Assignment1",
+  "version": "0.0.1",
+  "description": "Assignment1 for COMP22-M2021",
+  "main": "index.js",
+  "author": "Farishta Sultani",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.1"
+  }
+}
