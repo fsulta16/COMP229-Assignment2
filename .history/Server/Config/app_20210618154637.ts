@@ -19,7 +19,7 @@ mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open',function(){
-  console.log(`Connected to MongoDB at: ${DBConfig.HostName}`);
+  console.log(`Connected to MongoDB at: ${DBConfig.LocalURI}`);
 });
 
 // view engine setup
