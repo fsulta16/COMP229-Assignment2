@@ -31,7 +31,7 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
             res.end(err);
         }
         // show the edit view
-        res.render('index',{title: 'Edit', page: 'edit', item: contactItemToEdit})             
+        res.render('index',{title: 'Edit', page: 'contact-list', item: contactItemToEdit})             
     });         
 
 }
