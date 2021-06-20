@@ -41,20 +41,4 @@ router.post('/register', ProcessRegisterPage);
 
 /* GET - process the logout page - with /logout . */
 router.get('/logout', ProcessLogoutPage);
-
-function DisplayLoginPage(arg0: string, DisplayLoginPage: any) {
-  throw new Error('Function not implemented.');
-}
-
-function ProcessLoginPage(arg0: string, ProcessLoginPage: any) {
-  throw new Error('Function not implemented.');
-}
-
-function DisplayRegisterPage(arg0: string, DisplayRegisterPage: any) {
-  throw new Error('Function not implemented.');
-}
-
-function ProcessRegisterPage(arg0: string, ProcessRegisterPage: any) {
-  throw new Error('Function not implemented.');
-}
 //module.exports = router;

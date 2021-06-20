@@ -5,8 +5,8 @@ import passportLocalMongoose from 'passport-local-mongoose';
 const UserSchema = new Schema
 (
     {
-        name: String,
-        email: String,
+        username: String,
+        emailAddress: String,
         displayName: String,
         created:
         {
@@ -32,8 +32,8 @@ const UserSchema = new Schema
         export type UserDocument = mongoose.Document &
         {
             _id: String,
-            name: String,
-            email: String,
+            username: String,
+            emailAddress: String,
             displayName: String
         }
     }

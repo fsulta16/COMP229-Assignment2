@@ -13,7 +13,21 @@ router.get('/about', index_1.DisplayAboutPage);
 router.get('/project', index_1.DisplayProjectsPage);
 router.get('/service', index_1.DisplayServicePage);
 router.get('/contact', index_1.DisplayContactPage);
-router.get('/login', function (req, res, next) {
-    res.render('index', { title: 'Login', page: 'login' });
-});
+router.get('/login', DisplayLoginPage);
+router.post('/login', ProcessLoginPage);
+router.get('/register', DisplayRegisterPage);
+router.post('/register', ProcessRegisterPage);
+router.get('/logout', ProcessLogoutPage);
+function DisplayLoginPage(arg0, DisplayLoginPage) {
+    throw new Error('Function not implemented.');
+}
+function ProcessLoginPage(arg0, ProcessLoginPage) {
+    throw new Error('Function not implemented.');
+}
+function DisplayRegisterPage(arg0, DisplayRegisterPage) {
+    throw new Error('Function not implemented.');
+}
+function ProcessRegisterPage(arg0, ProcessRegisterPage) {
+    throw new Error('Function not implemented.');
+}
 //# sourceMappingURL=index.js.map
