@@ -43,8 +43,8 @@ function DisplayRegisterPage(req, res, next) {
 exports.DisplayRegisterPage = DisplayRegisterPage;
 function ProcessRegisterPage(req, res, next) {
     let newUser = new user_1.default({
-        name: req.body.name,
-        email: req.body.email,
+        username: req.body.username,
+        emailAddress: req.body.emailAddress,
         displayName: req.body.FirstName + " " + req.body.LastName
     });
     user_1.default.register(newUser, req.body.password, (err) => {

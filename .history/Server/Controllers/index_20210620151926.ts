@@ -93,14 +93,16 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
             console.error(err);
             return next(err);
         }
+
         // any login errors?
         if(!user)
         {
             req.flash('loginMessage', 'Authentication Error');
             return res.redirect('/login');
         }
+
         req.login(user, (err) =>
-        // any db errors?
+        // are there db errors?
         {
             if(err)
             {

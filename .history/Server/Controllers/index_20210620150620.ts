@@ -87,20 +87,22 @@ export function ProcessRegisterPage(req: Request, res: Response, next: NextFunct
 export function ProcessLoginPage(req: Request, res: Response, next: NextFunction): void
 {
     passport.authenticate('local', (err, user, info) => {
-        // any server errors?
+        
         if(err)
         {
             console.error(err);
             return next(err);
         }
-        // any login errors?
+
+        // are there login errors?
         if(!user)
         {
             req.flash('loginMessage', 'Authentication Error');
             return res.redirect('/login');
         }
+
         req.login(user, (err) =>
-        // any db errors?
+        // are there db errors?
         {
             if(err)
             {

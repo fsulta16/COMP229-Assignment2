@@ -100,7 +100,7 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
             return res.redirect('/login');
         }
         req.login(user, (err) =>
-        // any db errors?
+        // are there db errors?
         {
             if(err)
             {
