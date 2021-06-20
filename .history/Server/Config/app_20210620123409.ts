@@ -75,6 +75,10 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// create routing through event handling
+app.use('/', indexRouter);
+app.use('/contact-list', clothingRouter);
+
 // routing happens now
 app.use('/', indexRouter);
 app.use('/contact-list', contactRouter); //defines a new area of website called contact-list

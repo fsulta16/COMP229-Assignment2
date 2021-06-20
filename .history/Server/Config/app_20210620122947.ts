@@ -14,17 +14,10 @@ import passportLocal from 'passport-local';
 // modules for cors
 import cors from 'cors';
 
-// authentication objects
-let localStrategy = passportLocal.Strategy; // alias
-import User from '../Models/user';
-
-// module for auth messaging and error management
-import flash from 'connect-flash';
-
 
 import indexRouter from '../Routes/index';
 import contactRouter from '../Routes/contact'; // import link for clothing router
-
+import clothingRouter from '../Routes/clothing'; // import link for clothing router
 
 // App Configuration
 let app = express();
@@ -34,7 +27,7 @@ export default app; //export app as default Object for this module
 import * as DBConfig from "./db";
 mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-const db = mongoose.connection; //// alias for the mongoose connection
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open',function(){
   console.log(`Connected to MongoDB at: ${DBConfig.HostName}`);
@@ -51,33 +44,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-// add support for cors
-app.use(cors());
-
-// setup express session
-app.use(session({
-  secret: DBConfig.Secret,
-  saveUninitialized: false,
-  resave: false
-}));
-
-// initialize flash
-app.use(flash());
-
-// initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-// implement an Auth Strategy
-passport.use(User.createStrategy());
-
-// serialize and deserialize user data
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
 // routing happens now
 app.use('/', indexRouter);
 app.use('/contact-list', contactRouter); //defines a new area of website called contact-list
+app.use('/clothing-list', clothingRouter); //defines a new area of website called clothing-list
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
