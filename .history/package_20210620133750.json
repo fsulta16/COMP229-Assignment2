@@ -43,7 +43,7 @@
     "@types/node": "^15.12.1",
     "@types/passport": "^1.0.6",
     "@types/passport-local": "^1.0.33",
-    "@types/passport-local-mongoose": "^4.0.13"
+    "@types/passport-mongoose": "^4.0.13"
   },
   "description": "Assignment project for COMP229 - Week 6",
   "main": "index.js",

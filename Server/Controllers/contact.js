@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProcessDeletePage = exports.ProcessAddPage = exports.ProcessEditPage = exports.DisplayAddPage = exports.DisplayEditPage = exports.DisplayContactListPage = void 0;
 const contact_1 = __importDefault(require("../Models/contact"));
+const Util_1 = require("../Util");
 function DisplayContactListPage(req, res, next) {
     contact_1.default.find(function (err, contactCollection) {
         if (err) {
@@ -26,7 +27,7 @@ function DisplayEditPage(req, res, next) {
 }
 exports.DisplayEditPage = DisplayEditPage;
 function DisplayAddPage(req, res, next) {
-    res.render('index', { title: 'Add', page: 'update', clothing: '', displayName: UserDisplayName(req) });
+    res.render('index', { title: 'Add', page: 'update', clothing: '', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayAddPage = DisplayAddPage;
 function ProcessEditPage(req, res, next) {

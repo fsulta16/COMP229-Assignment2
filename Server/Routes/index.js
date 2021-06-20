@@ -30,4 +30,7 @@ function DisplayRegisterPage(arg0, DisplayRegisterPage) {
 function ProcessRegisterPage(arg0, ProcessRegisterPage) {
     throw new Error('Function not implemented.');
 }
+function ProcessLogoutPage(arg0, ProcessLogoutPage) {
+    throw new Error('Function not implemented.');
+}
 //# sourceMappingURL=index.js.map

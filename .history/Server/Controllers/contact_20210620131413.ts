@@ -36,7 +36,7 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
     });         
 
 }
-// Display Create page
+// Display (C)reate page
 export function DisplayAddPage(req: Request, res: Response, next: NextFunction): void
 {
     // show the edit view
@@ -45,7 +45,7 @@ export function DisplayAddPage(req: Request, res: Response, next: NextFunction):
 
 // Process Functions
 
-// Process Edit page
+// Process (E)dit page
 export function ProcessEditPage(req: Request, res: Response, next: NextFunction): void
 {
     let id = req.params.id;
