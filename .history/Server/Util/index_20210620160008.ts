@@ -12,7 +12,7 @@ export function UserDisplayName(req: Request): string
     }
     return '';
 }
-// users cannot access pages unless authenticated
+
 export function AuthGuard(req: Request, res: Response, next: NextFunction): void
 {
     if(!req.isAuthenticated())

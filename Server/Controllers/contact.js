@@ -11,7 +11,7 @@ function DisplayContactListPage(req, res, next) {
         if (err) {
             return console.error(err);
         }
-        res.render('index', { title: 'Contact List', page: 'contact-list', contact: contactCollection });
+        res.render('index', { title: 'Contact List', page: 'contact-list', contact: contactCollection, displayName: Util_1.UserDisplayName(req) });
     });
 }
 exports.DisplayContactListPage = DisplayContactListPage;
@@ -22,7 +22,7 @@ function DisplayEditPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Edit', page: 'edit', item: contactItemToEdit });
+        res.render('index', { title: 'Edit', page: 'edit', item: contactItemToEdit, displayName: Util_1.UserDisplayName(req) });
     });
 }
 exports.DisplayEditPage = DisplayEditPage;

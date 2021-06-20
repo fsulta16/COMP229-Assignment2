@@ -8,23 +8,23 @@ const passport_1 = __importDefault(require("passport"));
 const user_1 = __importDefault(require("../Models/user"));
 const Util_1 = require("../Util");
 function DisplayHomePage(req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
+    res.render('index', { title: 'Home', page: 'home', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayHomePage = DisplayHomePage;
 function DisplayAboutPage(req, res, next) {
-    res.render('index', { title: 'About Me', page: 'about' });
+    res.render('index', { title: 'About Me', page: 'about', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayAboutPage = DisplayAboutPage;
 function DisplayProjectsPage(req, res, next) {
-    res.render('index', { title: 'Projects', page: 'project' });
+    res.render('index', { title: 'Projects', page: 'project', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayProjectsPage = DisplayProjectsPage;
 function DisplayServicePage(req, res, next) {
-    res.render('index', { title: 'Services', page: 'service' });
+    res.render('index', { title: 'Services', page: 'service', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayServicePage = DisplayServicePage;
 function DisplayContactPage(req, res, next) {
-    res.render('index', { title: 'Contact', page: 'contact' });
+    res.render('index', { title: 'Contact', page: 'contact', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayContactPage = DisplayContactPage;
 function DisplayLoginPage(req, res, next) {
