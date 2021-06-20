@@ -1,10 +1,13 @@
 <!--Div created to seperate columns and rows with an add button  -->
 
 <div class="row">
-    <div class="col">    
+    <div class="col">
+    
      <h1><%= title %></h1>
      <div class="container">
-        
+        <a href="/contact/add" class="btn btn-primary" role="button" text-align = "center">
+        <i class="fas fa-plus-circle"></i> Add a contact
+        </a>
         <br> 
 <!--Table inserted -->
 
@@ -34,9 +37,6 @@
     <% } %>
   </tbody>
 </table>
-<a href="/contact/add" class="btn btn-primary" role="button" text-align = "center">
-        <i class="fas fa-plus-circle"></i> Add a contact
-        </a>
   </div>
 </div>
 </div>
