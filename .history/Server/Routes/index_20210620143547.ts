@@ -7,7 +7,7 @@ export default router;
 //res.render create a page through the template, pass object through the page titled property 
 
 // create an index controller instance
-import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayRegisterPage, DisplayServicePage, ProcessLoginPage, ProcessLogoutPage, ProcessRegisterPage} from '../Controllers/index';
+import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayProjectsPage, DisplayServicePage} from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);

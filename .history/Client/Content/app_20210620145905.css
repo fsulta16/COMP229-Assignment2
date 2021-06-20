@@ -178,7 +178,7 @@ input[type=submit]:hover {
 {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color: rgb(148, 240, 243);
+    background-color: lightgrey;
     border-radius: .3rem;
 }
 

@@ -13,24 +13,9 @@ router.get('/about', index_1.DisplayAboutPage);
 router.get('/project', index_1.DisplayProjectsPage);
 router.get('/service', index_1.DisplayServicePage);
 router.get('/contact', index_1.DisplayContactPage);
-router.get('/login', DisplayLoginPage);
-router.post('/login', ProcessLoginPage);
-router.get('/register', DisplayRegisterPage);
-router.post('/register', ProcessRegisterPage);
-router.get('/logout', ProcessLogoutPage);
-function DisplayLoginPage(arg0, DisplayLoginPage) {
-    throw new Error('Function not implemented.');
-}
-function ProcessLoginPage(arg0, ProcessLoginPage) {
-    throw new Error('Function not implemented.');
-}
-function DisplayRegisterPage(arg0, DisplayRegisterPage) {
-    throw new Error('Function not implemented.');
-}
-function ProcessRegisterPage(arg0, ProcessRegisterPage) {
-    throw new Error('Function not implemented.');
-}
-function ProcessLogoutPage(arg0, ProcessLogoutPage) {
-    throw new Error('Function not implemented.');
-}
+router.get('/login', index_1.DisplayLoginPage);
+router.post('/login', index_1.ProcessLoginPage);
+router.get('/register', index_1.DisplayRegisterPage);
+router.post('/register', index_1.ProcessRegisterPage);
+router.get('/logout', index_1.ProcessLogoutPage);
 //# sourceMappingURL=index.js.map

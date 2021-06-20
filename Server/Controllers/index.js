@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayContactPage = exports.DisplayServicePage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
+exports.ProcessLogoutPage = exports.ProcessLoginPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.DisplayLoginPage = exports.DisplayContactPage = exports.DisplayServicePage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
 const passport_1 = __importDefault(require("passport"));
 const user_1 = __importDefault(require("../Models/user"));
 const Util_1 = require("../Util");
@@ -34,26 +34,6 @@ function DisplayLoginPage(req, res, next) {
     return res.redirect('/contact-list');
 }
 exports.DisplayLoginPage = DisplayLoginPage;
-function ProcessLoginPage(req, res, next) {
-    passport_1.default.authenticate('local', (err, user, info) => {
-        if (err) {
-            console.error(err);
-            return next(err);
-        }
-        if (!user) {
-            req.flash('loginMessage', 'Authentication Error');
-            return res.redirect('/login');
-        }
-        req.login(user, (err) => {
-            if (err) {
-                console.error(err);
-                return next(err);
-            }
-            return res.redirect('/contact-list');
-        });
-    })(req, res, next);
-}
-exports.ProcessLoginPage = ProcessLoginPage;
 function DisplayRegisterPage(req, res, next) {
     if (!req.user) {
         return res.render('index', { title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: Util_1.UserDisplayName(req) });
@@ -82,6 +62,26 @@ function ProcessRegisterPage(req, res, next) {
     });
 }
 exports.ProcessRegisterPage = ProcessRegisterPage;
+function ProcessLoginPage(req, res, next) {
+    passport_1.default.authenticate('local', (err, user, info) => {
+        if (err) {
+            console.error(err);
+            return next(err);
+        }
+        if (!user) {
+            req.flash('loginMessage', 'Authentication Error');
+            return res.redirect('/login');
+        }
+        req.login(user, (err) => {
+            if (err) {
+                console.error(err);
+                return next(err);
+            }
+            return res.redirect('/contact-list');
+        });
+    })(req, res, next);
+}
+exports.ProcessLoginPage = ProcessLoginPage;
 function ProcessLogoutPage(req, res, next) {
     req.logout();
     res.redirect('/login');
