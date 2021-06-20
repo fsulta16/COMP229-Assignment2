@@ -22,23 +22,23 @@ function DisplayEditPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Edit', page: 'edit', item: contactItemToEdit, displayName: Util_1.UserDisplayName(req) });
+        res.render('index', { title: 'Edit', page: 'edit', contact: contactItemToEdit, displayName: Util_1.UserDisplayName(req) });
     });
 }
 exports.DisplayEditPage = DisplayEditPage;
 function DisplayAddPage(req, res, next) {
-    res.render('index', { title: 'Add', page: 'update', clothing: '', displayName: Util_1.UserDisplayName(req) });
+    res.render('index', { title: 'Add', page: 'update', contact: '', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayAddPage = DisplayAddPage;
 function ProcessEditPage(req, res, next) {
     let id = req.params.id;
-    let updatedClothingItem = new contact_1.default({
+    let updatedContactItem = new contact_1.default({
         "_id": id,
         "name": req.body.name,
         "number": req.body.number,
         "email": req.body.email,
     });
-    contact_1.default.updateOne({ _id: id }, updatedClothingItem, {}, (err) => {
+    contact_1.default.updateOne({ _id: id }, updatedContactItem, {}, (err) => {
         if (err) {
             console.error(err);
             res.end(err);

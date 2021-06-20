@@ -40,7 +40,7 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
 export function DisplayAddPage(req: Request, res: Response, next: NextFunction): void
 {
     // show the edit view
-    res.render('index', { title: 'Add', page: 'update', contact: '', displayName: UserDisplayName(req)  });
+    res.render('index', { title: 'Add', page: 'update', clothing: '', displayName: UserDisplayName(req)  });
 }
 
 // Process Functions
@@ -50,8 +50,8 @@ export function ProcessEditPage(req: Request, res: Response, next: NextFunction)
 {
     let id = req.params.id;
 
-    // instantiate a new Contact Item
-    let updatedContactItem = new Contact
+    // instantiate a new Clothing Item
+    let updatedClothingItem = new Contact
     ({
         "_id": id,
         "name": req.body.name,
@@ -60,8 +60,8 @@ export function ProcessEditPage(req: Request, res: Response, next: NextFunction)
     
     });
   
-    // find the contact item via db.contact.update({"_id":id}) and then update
-    Contact.updateOne({_id: id}, updatedContactItem, {}, (err) =>{
+    // find the clothing item via db.clothing.update({"_id":id}) and then update
+    Contact.updateOne({_id: id}, updatedClothingItem, {}, (err) =>{
       if(err)
       {
         console.error(err);

@@ -40,7 +40,7 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
 export function DisplayAddPage(req: Request, res: Response, next: NextFunction): void
 {
     // show the edit view
-    res.render('index', { title: 'Add', page: 'update', contact: '', displayName: UserDisplayName(req)  });
+    res.render('index', { title: 'Add', page: 'update', clothing: '', displayName: UserDisplayName(req)  });
 }
 
 // Process Functions
@@ -60,7 +60,7 @@ export function ProcessEditPage(req: Request, res: Response, next: NextFunction)
     
     });
   
-    // find the contact item via db.contact.update({"_id":id}) and then update
+    // find the clothing item via db.contact.update({"_id":id}) and then update
     Contact.updateOne({_id: id}, updatedContactItem, {}, (err) =>{
       if(err)
       {
