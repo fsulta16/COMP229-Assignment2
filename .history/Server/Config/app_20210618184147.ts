@@ -7,7 +7,6 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 
 import indexRouter from '../Routes/index';
-import contactRouter from '../Routes/contact'; // import link for clothing router
 import clothingRouter from '../Routes/clothing'; // import link for clothing router
 
 // App Configuration
@@ -37,8 +36,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 // routing happens now
 app.use('/', indexRouter);
-app.use('/contact-list', contactRouter); //defines a new area of website called contact-list
-app.use('/clothing-list', clothingRouter); //defines a new area of website called clothing-list
+app.use('/clothing-list', clothingRouter); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

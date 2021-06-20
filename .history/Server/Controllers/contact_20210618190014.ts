@@ -1,0 +1,19 @@
+import express, { Request, Response, NextFunction } from 'express';
+
+// import Clothing Model
+import Clothing from "../Models/contact";
+
+//Displays Clothing List Page
+export function DisplayContactListPage(req: Request, res: Response, next: NextFunction): void
+{
+    // goes through Clothing in Mongo
+    Clothing.find(function(err, contact){
+        if(err)
+        {
+            return console.error(err);
+        }    
+        // print out clothing-list to the console (need a page to do this)
+    console.log(contact);
+    });
+       
+}

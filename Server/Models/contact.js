@@ -1,15 +1,17 @@
-import mongoose from 'mongoose';
-const Schema = mongoose.Schema; // alias for the Mongoose Schema
-// Schema for database Contact
-const ContactSchema = new Schema
-({
-    Name: String, 
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const mongoose_1 = __importDefault(require("mongoose"));
+const Schema = mongoose_1.default.Schema;
+const ContactSchema = new Schema({
+    Name: String,
     Phone: String,
     Email: String
-},
-{
+}, {
     collection: "contact"
 });
-// Export Contact
-const Model = mongoose.model("Contact",ContactSchema);
-export default Model;
+const Model = mongoose_1.default.model("contact", ContactSchema);
+exports.default = Model;
+//# sourceMappingURL=contact.js.map

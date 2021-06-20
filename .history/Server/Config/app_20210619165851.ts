@@ -7,7 +7,7 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 
 import indexRouter from '../Routes/index';
-import contactRouter from '../Routes/contact'; // import link for clothing router
+//import contactRouter from '../Routes/contact'; // import link for clothing router
 import clothingRouter from '../Routes/clothing'; // import link for clothing router
 
 // App Configuration
